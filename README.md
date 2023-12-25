@@ -1,0 +1,1 @@
+# indecore-fullstack
