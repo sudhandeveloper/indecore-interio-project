@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.helo {
+  size: 100px;
+}
+
+html body {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: "dinblack";
+  src: url("./assets/images/DIN-Black\ Regular.ttf");
+}
+/* -----------------------------nav bar two hover --- */
+.one {
+  color: rgb(255, 0, 0);
+}
+.head-ul .he:hover {
+  color: rgb(255, 0, 0);
+}
+
+/* ===service menu drop down ===  */
+.servicesmenu:hover .servicedropdownitem {
+  display: block;
+  transition: all 50s ease-in-out;
+}
+.servicedropdownitem {
+  display: none;
+  transition: all 50s ease-in-out;
+}
+
+/* @media (max-width: 768px) {
+  .servicedropdownitem {
+    display: block;
+  }
+} */
+/* -----------end --------- */
+
+.image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-in-zoom-out {
+  animation: zoom-in-zoom-out 30s ease-in-out infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* ========================== Contact page =========*/
+.Contact-banner {
+  background-image: linear-gradient(
+    150deg,
+    #000000 0%,
+    rgba(51, 51, 51, 0.1) 100%
+  );
+}
+/* ============== all page black and white GrayScale============= */
+
+.Baner-black-white {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+.Baner-black-white:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+}
+.Baner-black-white {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+}
+/* ========================== */
+
+.scroll {
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 40px;
+  right: -80px;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(90, 92, 106, 1) 0%,
+    rgba(32, 45, 58, 1) 81.3%
+  );
+  color: #fff;
+  box-shadow: 0 0 5px 0px #888;
+  transition: all 400ms;
+}
+
+.scroll.visible {
+  right: 30px;
+  transition: all 400ms;
+  transform: rotate(360deg);
+}
+
+.scroll i {
+  margin-top: 10px;
+  text-shadow: 0 0 2px #fff;
+}
+
+.scroll:hover i {
+  animation-name: rotate;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes rotate {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-top: 5px;
+  }
+}
+/* ========================================================= */
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+  margin-left: 16px;
+}
