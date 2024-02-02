@@ -26,6 +26,8 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 import { AiFillStar } from "react-icons/ai";
 
+  
+
 // import Map from "../components/Map/map";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { BiLogoGmail } from "react-icons/bi";
@@ -229,7 +231,7 @@ const Homepage = () => {
         <section>
           <div className="pt-10 pb-1 bg-gray-200">
             <div className="">
-              <h1 className="text-center  font-normal  text-gray-500 tracking-wider  uppercase text-thirtyfivepixls font-popins ">
+              <h1 className="font-normal tracking-wider text-center text-gray-500 uppercase text-thirtyfivepixls font-popins ">
                 About{" "}
                 <span className="font-normal tracking-wider text-red-600 ">
                   {" "}
@@ -251,7 +253,7 @@ const Homepage = () => {
 
               <div className="w-[50%] max-lg:w-full  h-auto ">
                 <div className="h-[25%] text-center pt-5">
-                  <h1 className="font-normal tracking-wider text-center  text-gray-500 uppercase font-popins text-thirtyfivepixls">
+                  <h1 className="font-normal tracking-wider text-center text-gray-500 uppercase font-popins text-thirtyfivepixls">
                     <span className="text-red-600 font-popins">
                       {" "}
                       Inddecore{" "}
@@ -383,7 +385,7 @@ const Homepage = () => {
               </p>
               <div className="lg:w-[38%] md:w-[40%] max-md:w-[40%] max-sm:w-[50%] py-2 bg-red-600  mt-10 flex justify-evenly">
                 <Link to={"Contact-us"}>
-                  <button className="text-white uppercase font-cormantThiner mt-1">
+                  <button className="mt-1 text-white uppercase font-cormantThiner">
                     Contact Us
                   </button>
                 </Link>
@@ -505,7 +507,7 @@ const Homepage = () => {
 
               <h2 className="text-[27px] mb-2 mt-2 uppercase font-normal  font-popins ">
                 Why Choose Us{" "}
-                <span className="text-red-600 mr-2 ml-2"> INDDECORE</span>
+                <span className="ml-2 mr-2 text-red-600"> INDDECORE</span>
                 INTERIO Designer
               </h2>
               <div className="pl-5">
@@ -522,7 +524,7 @@ const Homepage = () => {
               </div>
               <div className="lg:w-[38%] md:w-[35%] max-sm:w-[50%] max-md:w-[40%] py-2 bg-red-600  mt-10 flex justify-evenly ">
                 <Link to={"Contact-us"}>
-                  <button className="text-white uppercase font-cormantThiner mt-1">
+                  <button className="mt-1 text-white uppercase font-cormantThiner">
                     Contact Us
                   </button>
                 </Link>
@@ -651,7 +653,7 @@ const Homepage = () => {
               </p>
               <div className="lg:w-[38%] md:w-[40%] max-md:w-[40%] py-2 bg-red-600  mt-10 flex justify-evenly">
                 <Link to={"Contact-us"}>
-                  <button className="text-white uppercase font-cormantThiner mt-1">
+                  <button className="mt-1 text-white uppercase font-cormantThiner">
                     Contact Us
                   </button>
                 </Link>

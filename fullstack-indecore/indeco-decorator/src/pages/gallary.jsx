@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import Axios from "axios";
 import "lightbox.js-react/dist/index.css";
 import { SlideshowLightbox } from "lightbox.js-react";
 
@@ -25,6 +25,15 @@ import GallaeyImageEighteen from "../assets/images/gallary/20-min.jpg";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 const Gallary = () => {
+  const [photos, setPhotos] = useState([]);
+
+  useEffect(() => {
+    Axios.get("https://jsonplaceholder.typicode.com/photos").then((res) => {
+      const lastTenImages = res.data.slice(-10);
+      setPhotos(lastTenImages);
+    });
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -38,7 +47,6 @@ const Gallary = () => {
         />
         <link rel="canonical" href="https://inddecoreinteriors.com/gallery" />
       </Helmet>
-
       <section>
         <section>
           <div className="relative h-96 max-md:h-[500px]">
@@ -51,10 +59,10 @@ const Gallary = () => {
             <div className="absolute top-0 w-full h-full px-16 py-10 Contact-banner"></div>
 
             <div className="absolute top-0 z-10 w-full h-auto px-16 pt-20 max-sm:px-3">
-              <h2 className="  text-white text-thirtyfivepixls  font-popins ">
+              <h2 className="text-white text-thirtyfivepixls font-popins">
                 EXPLORE OUR GALLERY AND LET THE IMAGES SPEAK FOR THEMSELVES.
               </h2>
-              <h2 className=" text-white text-thirtyfivepixls  font-popins ">
+              <h2 className="text-white text-thirtyfivepixls font-popins">
                 INDDECORE INTERIO
               </h2>
               <div className="w-20 h-[1px] bg-red-600"></div>
@@ -71,9 +79,9 @@ const Gallary = () => {
         {/* -------------------------------------------- */}
         <section>
           <div className="m-10">
-            <h2 className=" text-center text-thirtyfivepixls  font-popins">
+            <h2 className="text-center text-thirtyfivepixls font-popins">
               PERSONAL TOUCH BY{}
-              <span className="text-red-600 ml-2">INDDECORE INTERIO </span>
+              <span className="ml-2 text-red-600">INDDECORE INTERIO </span>
             </h2>
             <center>
               <div className="w-40 h-1 mt-3 mb-3 bg-red-600 rounded-full"></div>
@@ -82,6 +90,7 @@ const Gallary = () => {
         </section>
 
         {/* =================== Image Collection =================== */}
+
         <section className="py-6 ">
           <div className="container flex flex-col justify-center p-4 mx-auto">
             <SlideshowLightbox className="grid grid-cols-1 gap-4 lg:grid-cols-2 sm:grid-cols-2">
@@ -203,6 +212,26 @@ const Gallary = () => {
           </div>
         </section>
       </section>
+
+      <div className="container mx-auto">
+        <ul className="grid grid-cols-1 gap-4 lg:grid-cols-2 sm:grid-cols-2">
+          {photos.map((photoo) => (
+            <li key={photoo.id} className="">
+              <div className="justify-center p-4 ">
+                <SlideshowLightbox>
+                  <img
+                    className="object-cover  h-[350px] w-[100%]"
+                    src={photoo.url}
+                    alt={photoo.title}
+                  />
+                </SlideshowLightbox>
+
+                <p className="mt-2 text-center">{photoo.title}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
