@@ -12,8 +12,8 @@ import Commercial from "./pages/service-dropdown-pages/commercial-interior";
 import Corporate from "./pages/service-dropdown-pages/corporate-interior";
 import Gallary from "./pages/gallary";
 import Blog from "./pages/blog";
-import DashboardLogin from "./dash-board/dashbord-login-page/dash-board-login-page";
-import Dashboardpage from "./dash-board/dashbord-page/dasboard-page";
+// import DashboardLogin from "./dash-board/dashbord-login-page/dash-board-login-page";
+// import Dashboardpage from "./dash-board/dashbord-page/dasboard-page";
 import Footer from "./components/Fotter/fotter";
 function App() {
   return (
@@ -89,24 +89,9 @@ function App() {
             </>
           }
         />
-        <Route
-          path="/DashboardLogin"
-          element={
-            <>
-              {" "}
-              <ScrollToTop /> <DashboardLogin />
-            </>
-          }
-        />
+        
 
-        <Route
-          path="/Dashboardpage"
-          element={
-            <>
-              <ScrollToTop /> <Dashboardpage />
-            </>
-          }
-        />
+   
       </Routes>
 
       <Footer />
